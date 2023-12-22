@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: url(assets/images/background.webp) center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#score {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+
+button {
+    font-size: 24px;
+    margin: 10px;
+    padding: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: filter 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button:nth-child(1) {
+    background-color: transparent; 
+    background: url(assets/images/rock.jpg) center center no-repeat;
+    background-size: cover;
+    color: white; 
+}
+button:nth-child(2) {
+    background-color: transparent; 
+    background: url(assets/images/paper.avif) center center no-repeat;
+    background-size: cover;
+    color: black; 
+}
+button:nth-child(3) { background-color: transparent; 
+    background: url(assets/images/scissors.webp) center center no-repeat;
+    background-size: cover;
+    color: black;
+ }
+
+button:nth-child(4) { background-color: transparent; 
+    background: url(assets/images/lizard.jpg) center center no-repeat;
+    background-size: cover;
+    color: black; 
+}
+
+button:nth-child(5) { background-color: transparent; 
+    background: url(assets/images/star-trek-spock-faceless-vector-zm76zgtpuhc5pxrp.jpg) center center no-repeat;
+    background-size: cover;
+    color: white;; }
+
+button:hover {
+    filter: brightness(1.5);
+    transform: scale(1.1);
+}
+
+button:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    animation: ripple 0.8s linear;
+    pointer-events: none;
+}
+
+
+
+
+#restart-button {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#restart-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.1);
+}
+
+
+
+
+
+@keyframes ripple {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+}
