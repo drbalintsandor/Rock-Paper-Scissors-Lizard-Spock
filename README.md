@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors, Lizard, Spock Game
 
-![Rock, Paper, Scissors, Lizard, Spock](<../images/responsive.png>)
+![Rock, Paper, Scissors, Lizard, Spock](./assets/images/responsive.png)
 
 Welcome to the Rock, Paper, Scissors, Lizard, Spock game! This project is a simple web-based implementation of the popular game with an extended set of options. Whether you're looking for a quick game to pass the time or want to challenge a friend, our web-based version has got you covered.
 
@@ -53,7 +53,7 @@ Main Page
 1. - index.html
 
 
-![index.html](../Rock,%20Paper,%20Scissors,%20Lizard,%20Spock/assets/images/index.png) 
+![index.html](./assets/images/index.png) 
 
 ## Game Logic
 
@@ -98,7 +98,7 @@ To clone the repository:
 
 ## Testing
 
-* **Main Page:** ![index.html](..assets/images/index.png) 
+* **Main Page:** ![index.html](./assets/images/index.png) 
   - **Expected Behavior:** The main page should provide a clear and engaging entry point for users, displaying essential information and options for playing the Rock, Paper, Scissors, Lizard, Spock game.
   - **Testing Steps:**
     1. Checked that the game rules are clearly explained on the main page.
@@ -106,7 +106,7 @@ To clone the repository:
     3. Ensured the user can input their name or choose a default name before starting the game.
   - **Result:** The main page successfully meets design expectations, providing detailed game rules, functional buttons, and a user-friendly interface for player interaction.
 
-* **Gameplay:** ![index.html](..assets/images/testing.png)
+* **Gameplay:** ![index.html](./assets/images/testing.png)
   - **Expected Behavior:** During gameplay, the user should be able to make selections, understand the game outcome, and track their score.
   - **Testing Steps:**
     1. Played several rounds to confirm that the game accurately follows Rock, Paper, Scissors, Lizard, Spock rules.
@@ -127,15 +127,15 @@ To clone the repository:
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-- HTML ![index.html](..assets/images/w3html.png)
+- HTML ![index.html](./assets/images/w3html.png)
   - No errors were returned when passing through the official [W3C validator].
 
 
-- CSS ![index.html](..assets/images/cssvalidator.png)
+- CSS ![index.html](./assets/images/cssvalidator.png)
   - No errors were found when passing through the official [(Jigsaw) validator]
 
 
-- JAVASCRIPT ![index.html](..assets/images/javascriptvalidator.png)
+- JAVASCRIPT ![index.html](./assets/images/javascriptvalidator.png)
   - No errors were found when passing through the official [(Jigsaw) validator]
 
 ## Credits
