@@ -1,126 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background: url(../images/background.webp) center center fixed; 
-    background-size: cover;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     margin: 0;
-    padding: 0;
-    color: white;
+    padding: 45px 5px 5px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button:focus, button:active {
+    outline: 0;
+}
+
+#rules-picture {
+    width: 300px;
+    height: auto;
+}
+
+button {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 20px 40px;
+    border: 5px solid hsl(217, 16%, 45%);
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 60px 10px 10px 10px;
+    background-size: 250% 100%;
+    background-position: right bottom;
+    transition: background-position .3s ease-out, color .3s ease-out, transform .3s ease-out;
+}
+
+button:hover {
+    background-position: left bottom;
+    color: #e434af;
+    transform: scale(1.2); 
+}
+
+button:active {
+    transform: scale(1.2); 
+}
+
+#rock-btn {
+    background-image: url('../images/rock.jpg');
+    background-size: cover;
+}
+
+#paper-btn {
+    background-image: url('../images/paper.avif');
+    background-size: cover;
+}
+
+#scissors-btn {
+    background-image: url('../images/scissors.webp');
+    background-size: cover;
+}
+
+#lizard-btn {
+    background-image: url('../images/lizard.jpg');
+    background-size: cover;
+}
+
+#spock-btn {
+    background-image: url('../images/star-trek-spock-faceless-vector-zm76zgtpuhc5pxrp.jpg');
+    background-size: cover;
+}
+
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
 }
 
-h1 {
-    color: #fff;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#score {
+/* Style scoreboard */
+.scoreboard {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-bottom: 20px;
-    font-size: 24px; 
-    font-weight: bold; 
+    justify-content: center;
+    margin-top: 2rem;
+    opacity: 0; 
+    animation: fadeIn 3s ease-in-out forwards; 
 }
 
-
-button {
-    font-size: 24px;
-    margin: 10px;
-    padding: 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: filter 0.3s, transform 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-button:nth-child(1) {
-    background-color: transparent; 
-    background: url(../images/rock.jpg) center center no-repeat;
-    background-size: cover;
-    color: white; 
-}
-button:nth-child(2) {
-    background-color: transparent; 
-    background: url(../images/paper.avif) center center no-repeat;
-    background-size: cover;
-    color: black; 
-}
-button:nth-child(3) { background-color: transparent; 
-    background: url(../images/scissors.webp) center center no-repeat;
-    background-size: cover;
-    color: black;
- }
-
-button:nth-child(4) { background-color: transparent; 
-    background: url(../images/lizard.jpg) center center no-repeat;
-    background-size: cover;
-    color: black; 
-}
-
-button:nth-child(5) { background-color: transparent; 
-    background: url(../images/star-trek-spock-faceless-vector-zm76zgtpuhc5pxrp.jpg) center center no-repeat;
-    background-size: cover;
-    color: white;; }
-
-button:hover {
-    filter: brightness(1.5);
-    transform: scale(1.1);
-}
-
-button:hover::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    animation: ripple 0.8s linear;
-    pointer-events: none;
-}
-
-
-
-
-#restart-button {
-    font-size: 20px;
-    margin-top: 20px;
-    padding: 15px 30px;
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    background-color: #4caf50;
-    color: white;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#restart-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: scale(1.1);
-}
-
-
-
-
-
-@keyframes ripple {
-    to {
-        transform: scale(3);
+@keyframes fadeIn {
+    from {
         opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 
-#result {
-    margin-top: 20px;
-    font-size: 20px;
+.scoreboard > div {
+    font-size: 2rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border: 2px solid #fcfdfb;
+    border-radius: 10px;
+    color: #ecdde5;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Add background-color and transform transitions */
 }
+
+
+.scoreboard > div:hover {
+    background-color: #0a0408; 
+}
+
+
+.score-increase-animation {
+    animation: pump 1.9s ease-in-out;
+}
+
+@keyframes pump {
+    0%, 150% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+  
+
+
+/* Modal section */
+.modal.active, .modal-bg.active {
+    display: block;
+}
+
+.rules-btn {
+    border: 1px solid hsl(217, 16%, 45%);
+    padding: 5px 25px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+    cursor: pointer;
+    color: #971212;
+    background: linear-gradient(to left, transparent 50%, #fff 50%);
+    background-size: 250% 100%;
+    background-position: right bottom;
+    transition: background-position .3s ease-out, color .3s ease-out;
+    text-transform: uppercase;
+}
+
+.rules-btn:hover {
+    background-position: left bottom;
+    color: hsl(214, 47%, 23%);
+}
+
+.modal-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 50%);
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background: #ffffff;
+    max-width: 500px;
+    padding: 40px 30px 30px;
+    border-radius: 10px;
+    top: 40px;
+}
+
+.modal .close {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.modal .title {
+    color: hsl(229, 25%, 31%);
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.modal .content {
+    text-align: center;
+}
+
+.attribution {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    text-align: center;
+}
+
+#new-player-name {
+    width: 255px;
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-right: 6px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 30px 10px 5px;
+    }
+
+    .title-block {
+        padding: 12px 24px;
+        border-radius: 5px;
+        margin: 0 0 90px;
+    }
+
+    .user-choice {
+        height: 308px;
+        background-size: 220px;
+        max-width: 375px;
+    }
+
+    .user-choice .game-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .user-choice .game-card:before {
+        width: 75px;
+        height: 75px;
+    }
+
+    .user-choice .game-card img {
+        width: 35px;
+    }
+
+    .game-card.scissors {
+        top: 0;
+        left: 140px;
+    }
+
+    .game-card.paper {
+        top: 80px;
+        right: 15px;
+    }
+
+    .game-card.rock {
+        bottom: 4px;
+        right: 52px;
+    }
+
+    .game-card.lizard {
+        bottom: 0;
+        left: 55px;
+    }
+
+    .game-card.spock {
+        top: 86px;
+        left: 20px;
+    }
+
+    .rules-btn {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+

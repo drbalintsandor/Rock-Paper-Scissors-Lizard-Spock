@@ -7,27 +7,31 @@
     <title>Rock Paper Scissors Lizard Spock</title>
 </head>
 <body>
-    
-    <h1>Rock Paper Scissors Lizard Spock</h1>
-    <div id="score">
-        <div id="player-score">Player: 0</div>
-        <div id="computer-score">Computer: 0</div>
+    <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pierre_ciseaux_feuille_l%C3%A9zard_spock_aligned.svg/220px-Pierre_ciseaux_feuille_l%C3%A9zard_spock_aligned.svg.png" alt="Rock, Paper, Scissors, Lizard, Spock" id="rules-picture" />
+    <div class="scoreboard">
+        <div class="player-score" id="player-score">Player: 0</div>
+        <div class="computer-score" id="computer-score">Computer: 0</div>
     </div>
+
     <div id="buttons">
-        <button onclick="playGame('rock')">Rock</button>
-        <button onclick="playGame('paper')">Paper</button>
-        <button onclick="playGame('scissors')">Scissors</button>
-        <button onclick="playGame('lizard')">Lizard</button>
-        <button onclick="playGame('spock')">Spock</button>
+        <button id="rock-btn" onclick="playGame('rock')">Rock</button>
+        <button id="paper-btn" onclick="playGame('paper')">Paper</button>
+        <button id="scissors-btn" onclick="playGame('scissors')">Scissors</button>
+        <button id="lizard-btn" onclick="playGame('lizard')">Lizard</button>
+        <button id="spock-btn" onclick="playGame('spock')">Spock</button>
     </div>
     <div id="result"></div>
     <div id="name-input">
-        <input type="text" id="new-player-name" placeholder="Enter new player name">
+        <input type="text" id="new-player-name" placeholder="Enter your name">
         <button onclick="changePlayerName()">Change Name</button>
     </div>
-    <button id="restart-button" onclick="restartGame()">Restart</button>
+    <button id="restart-button" onclick="restartGame()">Play Again</button>
+    
+  
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/javascript/script.js"></script>
+
 </body>
 </html>

@@ -34,9 +34,13 @@ function playGame(playerChoice) {
     } else if (result === 'You win!') {
         // Player wins a round, show the success message
         showRoundWinMessage();
+        // Update scoreboard immediately
+        updatePlayerInfo();
     } else if (result === 'Computer wins!') {
         // Computer wins a round, show the error message
         showRoundLostMessage();
+        // Update scoreboard immediately
+        updatePlayerInfo();
     }
 }
 
@@ -46,9 +50,9 @@ function determineWinner(player, computer) {
     }
 
     if (
-        (player === 'rock' && (computer === 'scissors' || computer === 'lizard')) ||
-        (player === 'paper' && (computer === 'rock' || computer === 'spock')) ||
         (player === 'scissors' && (computer === 'paper' || computer === 'lizard')) ||
+        (player === 'paper' && (computer === 'rock' || computer === 'spock')) ||
+        (player === 'rock' && (computer === 'lizard' || computer === 'scissors')) ||
         (player === 'lizard' && (computer === 'spock' || computer === 'paper')) ||
         (player === 'spock' && (computer === 'scissors' || computer === 'rock'))
     ) {
@@ -61,26 +65,22 @@ function determineWinner(player, computer) {
 function updateScore(result) {
     if (result === 'You win!') {
         playerScore++;
-        updatePlayerInfo();
-        if (playerScore >= 10) {
-            // Player wins the game, show the success message
-            showGameWinMessage();
-        }
+        // Add pumping animation to player scoreboard
+        document.querySelector('.player-score').classList.add('score-increase-animation');
     } else if (result === 'Computer wins!') {
         computerScore++;
-        updatePlayerInfo();
-        if (computerScore >= 10) {
-            // Computer wins the game, show the error message
-            showGameLostMessage();
-        }
+        // Add pumping animation to computer scoreboard
+        document.querySelector('.computer-score').classList.add('score-increase-animation');
     }
 
-    if (playerScore >= 10 || computerScore >= 10) {
-        // Check for a winner when someone reaches 10 points
-        declareWinner();
-        // Disable game buttons
-        disableGameButtons();
-    }
+    // Update the player and computer score displays
+    updatePlayerInfo();
+
+    // Remove the pumping animation class after the animation is complete
+    setTimeout(() => {
+        document.querySelector('.player-score').classList.remove('score-increase-animation');
+        document.querySelector('.computer-score').classList.remove('score-increase-animation');
+    }, 500); // Adjust the duration to match the pump animation duration
 }
 
 function declareWinner() {
@@ -94,13 +94,9 @@ function declareWinner() {
     }
 
     document.getElementById('result').innerText = winnerMessage;
-
-    // Add any additional actions or UI updates for game over
 }
 
 function disableGameButtons() {
-    // Disable your game buttons here
-    // For example, if your buttons have IDs 'rock-btn', 'paper-btn', 'scissors-btn', you can use:
     document.getElementById('rock-btn').disabled = true;
     document.getElementById('paper-btn').disabled = true;
     document.getElementById('scissors-btn').disabled = true;
@@ -162,12 +158,10 @@ function restartGame() {
 
     document.getElementById('result').innerText = '';
 
-    // Enable game buttons
     enableGameButtons();
 }
 
 function enableGameButtons() {
-    // Enable your game buttons here
     document.getElementById('rock-btn').disabled = false;
     document.getElementById('paper-btn').disabled = false;
     document.getElementById('scissors-btn').disabled = false;
