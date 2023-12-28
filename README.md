@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors, Lizard, Spock Game
 
-![Rock, Paper, Scissors, Lizard, Spock](<../Rock, Paper, Scissors, Lizard, Spock/assets/images/responsive.png>)
+![Rock, Paper, Scissors, Lizard, Spock](<../images/responsive.png>)
 
 Welcome to the Rock, Paper, Scissors, Lizard, Spock game! This project is a simple web-based implementation of the popular game with an extended set of options. Whether you're looking for a quick game to pass the time or want to challenge a friend, our web-based version has got you covered.
 
