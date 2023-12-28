@@ -98,7 +98,7 @@ To clone the repository:
 
 ## Testing
 
-* **Main Page:** ![index.html](../Rock,%20Paper,%20Scissors,%20Lizard,%20Spock/assets/images/index.png) 
+* **Main Page:** ![index.html](../images/index.png) 
   - **Expected Behavior:** The main page should provide a clear and engaging entry point for users, displaying essential information and options for playing the Rock, Paper, Scissors, Lizard, Spock game.
   - **Testing Steps:**
     1. Checked that the game rules are clearly explained on the main page.
@@ -106,7 +106,7 @@ To clone the repository:
     3. Ensured the user can input their name or choose a default name before starting the game.
   - **Result:** The main page successfully meets design expectations, providing detailed game rules, functional buttons, and a user-friendly interface for player interaction.
 
-* **Gameplay:** ![index.html](../Rock,%20Paper,%20Scissors,%20Lizard,%20Spock/assets/images/testing.png)
+* **Gameplay:** ![index.html](../images/testing.png)
   - **Expected Behavior:** During gameplay, the user should be able to make selections, understand the game outcome, and track their score.
   - **Testing Steps:**
     1. Played several rounds to confirm that the game accurately follows Rock, Paper, Scissors, Lizard, Spock rules.
@@ -127,15 +127,15 @@ To clone the repository:
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-- HTML ![index.html](../Rock,%20Paper,%20Scissors,%20Lizard,%20Spock/assets/images/w3html.png)
+- HTML ![index.html](../images/w3html.png)
   - No errors were returned when passing through the official [W3C validator].
 
 
-- CSS ![index.html](../Rock,%20Paper,%20Scissors,%20Lizard,%20Spock/assets/images/cssvalidator.png)
+- CSS ![index.html](../images/cssvalidator.png)
   - No errors were found when passing through the official [(Jigsaw) validator]
 
 
-- JAVASCRIPT ![index.html](../Rock,%20Paper,%20Scissors,%20Lizard,%20Spock/assets/images/javascriptvalidator.png)
+- JAVASCRIPT ![index.html](../images/javascriptvalidator.png)
   - No errors were found when passing through the official [(Jigsaw) validator]
 
 ## Credits
