@@ -121,7 +121,7 @@ button:active {
 }
 
 @keyframes pump {
-    0%, 150% {
+    0%, 100% {
         transform: scale(1.5);
     }
     50% {
