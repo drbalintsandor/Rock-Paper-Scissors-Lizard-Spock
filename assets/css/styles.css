@@ -44,30 +44,30 @@ button {
 
 button:nth-child(1) {
     background-color: transparent; 
-    background: url(assets/images/rock.jpg) center center no-repeat;
+    background: url(../images/rock.jpg) center center no-repeat;
     background-size: cover;
     color: white; 
 }
 button:nth-child(2) {
     background-color: transparent; 
-    background: url(assets/images/paper.avif) center center no-repeat;
+    background: url(../images/paper.avif) center center no-repeat;
     background-size: cover;
     color: black; 
 }
 button:nth-child(3) { background-color: transparent; 
-    background: url(assets/images/scissors.webp) center center no-repeat;
+    background: url(../images/scissors.webp) center center no-repeat;
     background-size: cover;
     color: black;
  }
 
 button:nth-child(4) { background-color: transparent; 
-    background: url(assets/images/lizard.jpg) center center no-repeat;
+    background: url(../images/lizard.jpg) center center no-repeat;
     background-size: cover;
     color: black; 
 }
 
 button:nth-child(5) { background-color: transparent; 
-    background: url(assets/images/star-trek-spock-faceless-vector-zm76zgtpuhc5pxrp.jpg) center center no-repeat;
+    background: url(../images/star-trek-spock-faceless-vector-zm76zgtpuhc5pxrp.jpg) center center no-repeat;
     background-size: cover;
     color: white;; }
 
